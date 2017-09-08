@@ -1,24 +1,37 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-<!-- Google fonts header  -->
-<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Sacramento" rel="stylesheet">
-
-<!-- Google fonts header  -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
         <?php include("header.php"); ?>
+           <?php include("produit.php");?> 
+			<div class="container-fluid"> 
+			 <div class="row">
+			 <?php 
+				 for($i =0; $i<6; $i++ )
+				{
+			 ?> 
+			 
+			  
+			 
+				   <div class="card-group col-sm-12 col-md-6 col-lg-4">
+				     <div class="card">
+				         <img class="card-img-top" src= "<?php  echo $produit[$i]['image_src'];?>" alt="Card image cap">
+				        <div class="card-block">
+				            <h4 class=\"card-title\"> <?php  echo $produit[$i]['Nom'];?></h4>
+				            <p class="card-text"><?php  echo $produit[$i]['Description'];?></p>
+				             <a href="details.php?id=<?php echo $i; ?>" class="btn btn-primary">detail </a>
+				        </div>
+				     </div>
+			 	  </div>
+ 
+
+
+<?php
+}
+
+?>
+</div>
+</div> 
+
+
+
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -26,6 +39,6 @@
         <!-- Add your site or application content here -->
 
 
-    <?php include("footer.php"); ?>
+      <?php include("footer.php"); ?>
 
         
