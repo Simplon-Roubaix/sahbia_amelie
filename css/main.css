@@ -174,9 +174,22 @@ height:90px;
 .card-block
 {
     margin: auto;
+    font-family: Dosis;
 }
 
+.pied_page
+{
+    height: 150px;
+    background-color: rgb(186,186,186);
 
+}
+.pied_page p
+{
+    margin: 20px 45%;
+    font-size: 15px;
+    font-family:Dosis;
+
+}
 
 
 /* ==========================================================================
