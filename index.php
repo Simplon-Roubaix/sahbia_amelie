@@ -9,7 +9,10 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+<!-- Google fonts header  -->
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Sacramento" rel="stylesheet">
 
+<!-- Google fonts header  -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -21,7 +24,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        
+
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
