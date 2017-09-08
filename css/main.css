@@ -138,9 +138,22 @@ border-radius:50px;
 width:100px;
 height:90px;
 
-
-
-
+}
+.card-img-top
+{
+    margin: auto;
+    margin-top: 40px;
+}
+.btn
+{
+    background-color: rgb(205,7,92);
+    border: 2px solid transparent;
+    width: 100px;
+}
+.card
+{
+    background-color: rgb(244,243,242);
+}
 
 
 
