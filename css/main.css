@@ -152,11 +152,29 @@ height:90px;
 }
 .card
 {
-    background-color: rgb(244,243,242);
+    /*background-color: rgb(244,243,242);*/
+    border: none;
 }
 
-
-
+.card-title
+{
+    color: rgb(76,76,76);
+    font-size: 15px;
+}
+.card-group
+{
+    margin-bottom: 50px;
+}
+.btn-primary:hover 
+{
+    color: #f21ad0;
+    background-color: #dbc9d8;
+    border-color: #ebf0f5;
+}
+.card-block
+{
+    margin: auto;
+}
 
 
 

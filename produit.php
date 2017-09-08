@@ -3,7 +3,7 @@
                                 		  'Nom' => 'Sac à main en cuir',
 
                                 		  'Color' => 'bleu',
-                                 		  'Prix' => '150.00 €',
+                                 		  'Prix' => '150 €',
                                 		  'Description' => 'Sac à main en cuir.
                                                 Anse réglable.
                                                 2 poignées.
@@ -21,7 +21,7 @@
                                 		  'Nom' => 'Sac à main en cuir',
 
                                 		  'Color' => 'rouge',
-                                 		  'Prix' => '500.00 €',
+                                 		  'Prix' => '500 €',
                                 		   'Description' => 'Sac à main en cuir grainé.
                                         2 anses.
                                         Logo métallique devant.
@@ -57,13 +57,13 @@
                                     ['image_src'=>'img/sac4.jpg',
                                 	 'Nom' => 'Sac à main en cuir',
 
-                                	  'Color' => 'vert',
+                                	  'Color' => 'marron',
                                  	 'Prix' => '80 €',
                                     'Description' => 'prduit_beaute'],
                                     ['image_src'=>'img/sac5.jpg',
                                 	 'Nom' => 'Sac à main en cuir',
 
-                                	  'Color' => 'vert',
+                                	  'Color' => 'beige',
                                  	 'Prix' => '120 €',
                                     'Description' => 'Sac à main en cuir grainé.
                                     Anse.
