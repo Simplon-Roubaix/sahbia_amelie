@@ -10,7 +10,7 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 <!-- Google fonts header  -->
- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
 <!-- Google fonts header  -->
         <link rel="stylesheet" href="css/normalize.css">
@@ -24,18 +24,15 @@
        <div class="row entete">
 
             <div id="marque" class="col-12 col-md-12 col-lg-6">
-              <p> La Petite Boutique.com</p>
+              <p> <strong>La Petite</strong> Boutique.com</p>
 
             </div>
+            <form id="recherche" method="post">
 
-            <div class="form-group col-12 col-md-12 col-lg-6 ">
-                <div class="input-group input-group-sm icon-addon addon-sm">
-                  <input type="text" placeholder="Texte" name="" id="schbox" class="form-control input-sm">
-                  <i class="icon icon-search"></i>
-                  <span class="input-group-btn">
-                    <button type="submit" class="btn btn-inverse">Rechercher</button>
-                  </span>
-                </div>
-              </div>
+              <input name="saisie" type="text" placeholder="Mots-Clefs..." required />
+              <input class="loupe" type="submit" value="" />
+
+            </form>
             </div>
+
 <!-- </div> -->

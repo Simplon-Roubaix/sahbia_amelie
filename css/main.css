@@ -98,27 +98,52 @@ textarea {
 
 /*header*/
 .entete{
-background-color:red;
+background-color:white;
 height: 250px;
-padding-top: 25px;
-}
-
-.form-group{
-/*display: flex;
-flex-direction: row;
-justify-content:center;*/
-/*margin-left: 55px;*/
+padding-top: 55px;
+font-family: 'Quicksand', sans-serif;
+font-size: 25px;
 
 }
+
+
+
+#recherche {
+width:208px;
+height:24px;
+background:white;
+box-shadow:1px 1px 2px pink inset;
+border-radius:2em;
+}
+
+#recherche .loupe {
+background:url(http://www.larevuedekenza.fr/wp-content/themes/quarter/images/sidebar/loupe.png) no-repeat 0 0;
+width:24px;
+
+}
+
+#recherche input {
+outline:0;
+border:0;
+margin:0;
+height:24px;
+float:left;
+display:block;
+}
+
+#recherche input[type=text] {
+font:300 12px HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+background:none;
+width:180px;
+padding:0 9px;
+color:#666;
+}
+
 #marque{
-/*display:flex;
-flex-direction:row;
-justify-content:flex-start;
-padding-top:20px;*/
+margin-left: 40px;
 
 
 }
-
 
 /*fin du header*/
 
