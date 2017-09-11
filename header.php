@@ -10,7 +10,8 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 <!-- Google fonts header  -->
-<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Sacramento" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
 
 <!-- Google fonts header  -->
         <link rel="stylesheet" href="css/normalize.css">
@@ -19,17 +20,26 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+      <!-- <div class="container_fluid"> -->
 
-<div id="header">
+       <div class="row entete">
 
-  <div id="logo">
-    <div class="roundedImage">
-  <img class="activator" src="img/caddy3.jpeg"/>
-</div>
-  </div>
-<div id="marque">
-  <p> LA PETITE BOUTIQUE</p>
+            <div id="marque" class="col-12 col-md-12 col-lg-6">
+              <p> <strong>La Petite</strong><FONT color="#E64C93"> Boutique</FONT>.com</p>
+
+            </div>
+            <form id="recherche" method="post">
+
+              <input name="saisie" type="text" placeholder="Rechercher..." required />
+              <input class="loupe" type="submit" value="" />
+
+            </form>
+            <div id="caddy">
+              <img src="img/caddi.jpg" alt="caddy" height="50" width="50">
+            </div>
+
+            </div>
+
+
 
 </div>
-</div>
-<!--header-->
