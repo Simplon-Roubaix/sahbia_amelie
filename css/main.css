@@ -98,9 +98,9 @@ textarea {
 
 /*header*/
 .entete{
-background-color:white;
-height: 250px;
-padding-top: 55px;
+background-color: rgb(186,186,186);
+height: 200px;
+padding-top: 80px;
 font-family: 'Quicksand', sans-serif;
 font-size: 35px;
 
@@ -110,10 +110,11 @@ font-size: 35px;
 
 #recherche {
 width:208px;
-height:24px;
+height:35px;
 background:white;
 box-shadow:1px 1px 2px rgb(233,26,127) inset;
 border-radius:2em;
+margin-left: 50px;
 }
 
 #recherche .loupe {
@@ -151,8 +152,14 @@ margin-left: 40px;
 
 margin-top: -20px;
 margin-right: 5px;
+margin-left: 20px;
 
 
+
+}
+.caddu__img
+{
+   border-radius: 50%; 
 }
 
 /*fin du header*/
@@ -172,13 +179,44 @@ margin-right: 5px;
 }
 .card
 {
-    background-color: rgb(244,243,242);
+    /*background-color: rgb(244,243,242);*/
+    border: none;
 }
 
+.card-title
+{
+    color: rgb(76,76,76);
+    font-size: 15px;
+}
+.card-group
+{
+    margin-bottom: 50px;
+}
+.btn-primary:hover 
+{
+    color: #f21ad0;
+    background-color: #dbc9d8;
+    border-color: #ebf0f5;
+}
+.card-block
+{
+    margin: auto;
+    font-family: Dosis;
+}
 
+.pied_page
+{
+    height: 150px;
+    background-color: rgb(186,186,186);
 
+}
+.pied_page p
+{
+    margin: 20px 45%;
+    font-size: 15px;
+    font-family:Dosis;
 
-
+}
 
 /* ==========================================================================
    Helper classes
