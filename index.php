@@ -1,15 +1,15 @@
 
         <?php include("header.php"); ?>
-           <?php include("produit.php");?> 
-			<div class="container-fluid"> 
+           <?php include("produit.php");?>
+			<div class="container-fluid">
 			 <div class="row">
-			 <?php 
+			 <?php
 				 for($i =0; $i<6; $i++ )
 				{
-			 ?> 
-			 
-			  
-			 
+			 ?>
+
+
+
 				   <div class="card-group col-sm-12 col-md-6 col-lg-4">
 				     <div class="card">
 				         <img class="card-img-top center" src= "<?php  echo $produit[$i]['image_src'];?>" alt="Card image cap" height="250" width="250">
@@ -22,7 +22,6 @@
 				     </div>
 			 	  </div>
 
- 
 
 
 <?php
@@ -30,7 +29,7 @@
 
 ?>
 </div>
-</div> 
+</div>
 
 
 
@@ -42,5 +41,3 @@
 
 
       <?php include("footer.php"); ?>
-
-        
