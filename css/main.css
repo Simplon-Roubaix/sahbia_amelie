@@ -102,7 +102,7 @@ background-color:white;
 height: 250px;
 padding-top: 55px;
 font-family: 'Quicksand', sans-serif;
-font-size: 25px;
+font-size: 35px;
 
 }
 
@@ -112,7 +112,7 @@ font-size: 25px;
 width:208px;
 height:24px;
 background:white;
-box-shadow:1px 1px 2px pink inset;
+box-shadow:1px 1px 2px rgb(233,26,127) inset;
 border-radius:2em;
 }
 
@@ -135,12 +135,22 @@ display:block;
 font:300 12px HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 background:none;
 width:180px;
-padding:0 9px;
+padding:0 10px;
 color:#666;
 }
 
 #marque{
+margin-top: -20px;
 margin-left: 40px;
+
+
+
+}
+
+#caddy{
+
+margin-top: -20px;
+margin-right: 5px;
 
 
 }

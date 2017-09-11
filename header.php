@@ -12,6 +12,7 @@
 <!-- Google fonts header  -->
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
+
 <!-- Google fonts header  -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,15 +25,21 @@
        <div class="row entete">
 
             <div id="marque" class="col-12 col-md-12 col-lg-6">
-              <p> <strong>La Petite</strong> Boutique.com</p>
+              <p> <strong>La Petite</strong><FONT color="#E64C93"> Boutique</FONT>.com</p>
 
             </div>
             <form id="recherche" method="post">
 
-              <input name="saisie" type="text" placeholder="Mots-Clefs..." required />
+              <input name="saisie" type="text" placeholder="Rechercher..." required />
               <input class="loupe" type="submit" value="" />
 
             </form>
+            <div id="caddy">
+              <img src="img/caddi.jpg" alt="caddy" height="50" width="50">
             </div>
 
-<!-- </div> -->
+            </div>
+
+
+
+</div>

@@ -16,7 +16,7 @@
                                                 Coloris : camel
                                                 Matière : 100% cuir de vachette
                                                 Dimensions : 32 x 28 x 14 cm'],
-                                 
+
                                    ['image_src'=>'img/sac2.jpeg',
                                 		  'Nom' => 'Sac à main en cuir',
 
@@ -97,6 +97,6 @@
                                     Matière : 100% cuir
                                     Matière doublure : toile
                                     Dimensions : 36 x 25 x 13 cm']
-                                    
+
                                 ];
  ?>
