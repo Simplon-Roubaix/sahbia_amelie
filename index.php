@@ -14,9 +14,9 @@
 				     <div class="card">
 				         <img class="card-img-top center" src= "<?php  echo $produit[$i]['image_src'];?>" alt="Card image cap" height="250" width="250">
 				        <div class="card-block">
-				            <h4 class=\"card-title\"> <?php  echo $produit[$i]['Nom'];?></h4>
-				            <p class="card-text"><?php  echo $produit[$i]['Color'];?></p>
-				            <p class="card-text"><?php  echo $produit[$i]['Prix'];?></p>
+				            <h4 class="card-title"> <?php  echo $produit[$i]['Nom'];?></h4>
+				            <p class="card-text">color:<?php  echo $produit[$i]['Color'];?></p>
+				            <p class="card-text">prix:<?php  echo $produit[$i]['Prix'];?></p>
 				             <a href="details.php?id=<?php echo $i; ?>" class="btn btn-primary">detail </a>
 				        </div>
 				     </div>

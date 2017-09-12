@@ -10,7 +10,8 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 <!-- Google fonts header  -->
-<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" type="x-icon"> 
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Fredericka+the+Great|Sacramento|Dosis" rel="stylesheet">
 
 
 <!-- Google fonts header  -->
@@ -35,7 +36,7 @@
 
             </form>
             <div id="caddy">
-              <img src="img/caddi.jpg" alt="caddy" height="50" width="50">
+              <img src="img/caddi.jpg" alt="caddy" class="caddu__img" height="45" width="45">
             </div>
 
             </div>
