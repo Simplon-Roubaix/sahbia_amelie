@@ -10,8 +10,8 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 <!-- Google fonts header  -->
-
-<link href="https://fonts.googleapis.com/css?family=Quicksand|Fredericka+the+Great|Sacramento|Dosis" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" type="x-icon"> 
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Fredericka+the+Great|Sacramento|Dosis" rel="stylesheet">
 
 
 <!-- Google fonts header  -->
