@@ -25,22 +25,30 @@
 
        <div class="row entete">
 
-            <div id="marque" class="col-12 col-md-12 col-lg-6">
+            <div id="marque" class="col">
               <p> <strong>La Petite</strong><FONT color="#E64C93"> Boutique</FONT>.com</p>
 
             </div>
+            <!-- <div class="col-12 col-md-12 col-lg-3">
             <form id="recherche" method="post">
 
               <input name="saisie" type="text" placeholder="Rechercher..." required />
               <input class="loupe" type="submit" value="" />
 
             </form>
-            <div id="caddy">
+            </div> -->
+            
+             <div class="connexion-button col ">
+              <a class="btn" href="administrateur.php">Connexion</a>
+            </div>
+
+            <div id="caddy" class="col">
               <img src="img/caddi.jpg" alt="caddy" class="caddu__img" height="45" width="45">
             </div>
 
-            </div>
+        </div>
+            
 
 
 
-</div>
+
