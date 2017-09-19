@@ -1,102 +1,5 @@
 <?php         
-                  // $produit = [['image_src'=>'img/sac1.jpg',
-                  //               		  'Nom' => 'Sac à main en cuir',
-
-                  //               		  'Color' => 'bleu',
-                  //                		  'Prix' => '150 €',
-                  //               		  'Description' => 'Sac à main en cuir.
-                  //                               Anse réglable.
-                  //                               2 poignées.
-                  //                               2 poches devant.
-                  //                               Poche intérieure zippée.
-                  //                               Rivets décoratifs sur les côtés.
-                  //                               Renforts à la base.
-                  //                               Fermeture zippée.
-
-                  //                               Coloris : camel
-                  //                               Matière : 100% cuir de vachette
-                  //                               Dimensions : 32 x 28 x 14 cm'],
-
-                  //                  ['image_src'=>'img/sac2.jpeg',
-                  //               		  'Nom' => 'Sac à main en cuir',
-
-                  //               		  'Color' => 'rouge',
-                  //                		  'Prix' => '500 €',
-                  //               		   'Description' => 'Sac à main en cuir grainé.
-                  //                       2 anses.
-                  //                       Logo métallique devant.
-                  //                       Brides à boucle décoratives sur les côtés.
-                  //                       3 compartiments intérieurs dont 1 zippé.
-                  //                       3 poches intérieures dont 1 zippée.
-                  //                       Poche zippée au dos.
-                  //                       Fermeture zippée.
-
-                  //                       Coloris : cognac
-                  //                       Matière : 100% cuir
-                  //                       Matière doublure : toile
-                  //                       Dimensions : 33 x 26 x 13 cm'],
-                  //                   ['image_src'=>'img/sac3.jpg',
-                  //               	 'Nom' => 'Sac à main en cuir',
-
-                  //               	  'Color' => 'vert',
-                  //                	 'Prix' => '70 €',
-                  //                   'Description' => 'Sac à main en cuir grainé.
-                  //                       Anse.
-                  //                       Logo métallique et pompons devant.
-                  //                       Bride à boucle et rivets décoratifs sur les côtés.
-                  //                       3 compartiments intérieurs dont 1 zippé.
-                  //                       3 poches intérieures dont 1 zippée.
-                  //                       Poche zippée au dos.
-                  //                       Fermeture zippée et par rabat.
-
-                  //                       Coloris : cognac
-                  //                       Matière : 100% cuir
-                  //                       Matière doublure : toile
-                  //                       Dimensions : 36 x 25 x 13 cm'],
-
-                  //                   ['image_src'=>'img/sac4.jpg',
-                  //               	 'Nom' => 'Sac à main en cuir',
-
-                  //               	  'Color' => 'marron',
-                  //                	 'Prix' => '80 €',
-                  //                   'Description' => 'prduit_beaute'],
-                  //                   ['image_src'=>'img/sac5.jpg',
-                  //               	 'Nom' => 'Sac à main en cuir',
-
-                  //               	  'Color' => 'beige',
-                  //                	 'Prix' => '120 €',
-                  //                   'Description' => 'Sac à main en cuir grainé.
-                  //                   Anse.
-                  //                   Logo métallique et pompons devant.
-                  //                   Bride à boucle et rivets décoratifs sur les côtés.
-                  //                   3 compartiments intérieurs dont 1 zippé.
-                  //                   3 poches intérieures dont 1 zippée.
-                  //                   Poche zippée au dos.
-                  //                   Fermeture zippée et par rabat.
-
-                  //                   Coloris : cognac
-                  //                   Matière : 100% cuir
-                  //                   Matière doublure : toile
-                  //                   Dimensions : 36 x 25 x 13 cm'],
-
-                  //                   ['image_src'=>'img/sac6.jpg',
-                  //               	 'Nom' => 'Sac à main en cuir',
-
-                  //               	  'Color' => 'vert',
-                  //                	 'Prix' => '60 €',
-                  //                   'Description' => 'Sac à main en cuir grainé.
-                  //                   Anse.
-                  //                   Logo métallique et pompons devant.
-                  //                   Bride à boucle et rivets décoratifs sur les côtés.
-                  //                   3 compartiments intérieurs dont 1 zippé.
-                  //                   3 poches intérieures dont 1 zippée.
-                  //                   Poche zippée au dos.
-                  //                   Fermeture zippée et par rabat.
-
-                  //                   Coloris : cognac
-                  //                   Matière : 100% cuir
-                  //                   Matière doublure : toile
-                  //                   Dimensions : 36 x 25 x 13 cm']
+                  
 // ADD ARTICLES IN TABLE ARTICLES IN DATABASE:
 // -------------------------------------------------------------------------
  try
@@ -182,24 +85,28 @@ $resultat = move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
   
      $type=$_FILES['image']['type'] ;
 
+    //requette pour réscupérer l'id d'article:
+    $req4=$bdd->query('SELECT id FROM articles ORDER BY id DESC LIMIT 1 ');
+     $idarticle=$req4->fetch();
+     $idarticle=(int)$idarticle[0];
+    var_dump($idarticle);
      
-     $req3 = $bdd->prepare('INSERT INTO imagesinfor(src, poid, type) VALUES(:src, :poid, :type)');
-
+     $req3 = $bdd->prepare('INSERT INTO imagesinfor(idarticle,src, type, taille) VALUES(:idarticle, :src, :type, :taille)');
         $req3->execute(array(
-
+             'idarticle'=> $idarticle,
             'src' => $src,
 
-            'poid' => $poid,
+            'type' => $type,
 
-            'type' => $type
+            'taille' => $poid
                
 
             ));
 
-         $bdd->exec('ALTER TABLE imagesinfo ADD CONSTRAINT fk_num_article FOREIGN KEY (idarticle) REFERENCES aerticles(id)' );
+         // $req4=$bdd->exec('ALTER TABLE imagesinfor ADD CONSTRAINT fk_num_article FOREIGN KEY (idarticle) REFERENCES aerticles(id)' );
  ?>
 
 
 
                                 
- ?>
+
