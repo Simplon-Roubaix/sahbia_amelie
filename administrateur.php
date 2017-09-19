@@ -20,8 +20,7 @@
 <?php
 
 
-      $password=$_POST['psw'];
-	 $user=htmlspecialchars($_POST['user']);
+     
 
 
       try
@@ -41,36 +40,43 @@
         }
 
           
-      $req=$bdd->prepare('SELECT COUNT(*)  FROM administateurs  WHERE unsername=?');
-       $req->execute([$user]);
-       $nombrecompte=$req->fetchColumn();
-       
-        
+      
    
 
 
 
     
-	if( isset($password)&&isset($user) )
+	if( isset($_POST['psw'])&&isset($_POST['user']) )
 	{
+		 $password=$_POST['psw'];
+	    $user=htmlspecialchars($_POST['user']);
+
+        $req=$bdd->prepare('SELECT COUNT(*)  FROM administateurs  WHERE unsername=?');
+       $req->execute(array($_POST['user']));
+       $nombrecompte=$req->fetchColumn();
+       
+        
+
+
        if($nombrecompte>0)
        {
        	      $req2=$bdd->prepare('SELECT COUNT(*)  FROM administateurs  WHERE password=?');
-             $req2->execute([$password]);
+             $req2->execute(array($_POST['psw']));
              $nombrpassword=$req2->fetchColumn();
              
           if($nombrpassword>0)
             {include("formulaire.php");}
-         }
+         
          else {
-      print "Aucune ligne ne correspond à la requête.";
-   }
-	}
+      			print "Aucune ligne ne correspond à la requête.";
+   			}
+	    }
 	else {
 		    echo "<script language=\"javascript\">";
 			echo "alert('mot de passe ou nom utilistaur  incorect')";
 			echo "</script>";
 	   }
+	}   
 
 ?> 
 

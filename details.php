@@ -17,13 +17,14 @@ try
         }
 
      $indice=$_GET['i'];
+     $src=$_GET['sr'];
      $req=$bdd->prepare('SELECT * FROM articles  WHERE id=? ');
       $req->execute([$indice]);
-      $donnes=$req->fetch();
-?>
 
+      $donnes=$req->fetch();
+    ?>
 <div class="card mb-3">
-  <img class="card-img-top" src=""  alt="Card image cap">
+  <img class="card-img-top" src="<?php  echo $src;?>"  alt="Card image cap">
   <div class="card-block">
     <h4 class="card-title"><?php  echo $donnes['nom'];?></h4>
 

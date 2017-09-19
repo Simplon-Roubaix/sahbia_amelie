@@ -38,13 +38,13 @@
             </form>
             </div> -->
             
-             <div class="connexion-button col ">
+             <div class="connexion-button col  mr-0">
               <a class="btn" href="administrateur.php">Connexion</a>
             </div>
 
-            <div id="caddy" class="col">
+            <!-- <div id="caddy" class="col">
               <img src="img/caddi.jpg" alt="caddy" class="caddu__img" height="45" width="45">
-            </div>
+            </div> -->
 
         </div>
             

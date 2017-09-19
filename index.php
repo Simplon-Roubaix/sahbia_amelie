@@ -19,22 +19,25 @@
         }
 
         $req=$bdd->query('SELECT * FROM articles');
-        
-        while($donnes=$req->fetch())
+        $req2=$bdd->query('SELECT src FROM imagesinfor');
+        ?>
+        <div class="container-fluid">
+			 <div class="row">
+		<?php	 
+        while(($donnes=$req->fetch())AND($donne2=$req2->fetch()))
         {
 
         ?>
 
-			<div class="container-fluid">
-			 <div class="row">
+			
 				   <div class="card-group col-sm-12 col-md-6 col-lg-4">
 				     <div class="card">
-				         <img class="card-img-top center" src= "" alt="Card image cap" height="250" width="250">
+				         <img class="card-img-top center" src="<?php echo $donne2['src'] ?>" alt="Card image cap" height="250" width="250">
 				        <div class="card-block">
 				            <h4 class="card-title"> <?php  echo $donnes['nom'];?></h4>
 				            <p class="card-text">color:<?php  echo $donnes['color'];?></p>
 				            <p class="card-text">prix:<?php  echo $donnes['prix'];?></p>
-				             <a href="details.php?i=<?php echo $donnes['id']; ?>" class="btn btn-primary">detail </a>
+				             <a href="details.php?i=<?php echo $donnes['id']; ?> &amp; sr= <?php echo $donne2['src'];?>" class="btn btn-primary">detail </a>
 				        </div>
 				     </div>
 			 	  </div>
@@ -47,6 +50,7 @@
 ?>
 </div>
 </div>
+
 
 
 
