@@ -1,4 +1,25 @@
-<?php include("header.php");
+<?php include("header.php");?>
+
+<div id="administateur" class="text-center">
+	 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" accept-charset="utf-8">
+         User name:
+         <input type="text" name="user">
+         User password:
+
+        <input type="password" name="psw">
+	    <input type="submit" value="Valider" />
+		
+	 </form>
+	</div>
+    <hr>
+
+
+
+
+     
+<?php
+
+
       $password=$_POST['psw'];
 	 $user=htmlspecialchars($_POST['user']);
 
@@ -54,19 +75,7 @@
 ?> 
 
 
-<div id="administateur" class="text-center">
-	 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" accept-charset="utf-8">
-         User name:
-         <input type="text" name="user">
-         User password:
 
-        <input type="password" name="psw">
-	    <input type="submit" value="Valider" />
-		
-	 </form>
-	</div>
-    <hr>
-   <br>
 
    <?php
 	
