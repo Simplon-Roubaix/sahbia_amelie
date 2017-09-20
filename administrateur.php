@@ -1,4 +1,8 @@
-<?php include("header.php");?>
+<?php 
+ 
+include("header.php");
+  
+?>
 
 <div id="administateur" class="text-center">
 	 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" accept-charset="utf-8">
@@ -50,6 +54,8 @@
 	{
 		 $password=$_POST['psw'];
 	    $user=htmlspecialchars($_POST['user']);
+	     $_SESSION['user']=$user;
+	     $_SESSION['connecte']=1;
 
         $req=$bdd->prepare('SELECT COUNT(*)  FROM administateurs  WHERE unsername=?');
        $req->execute(array($_POST['user']));
@@ -65,7 +71,13 @@
              $nombrpassword=$req2->fetchColumn();
              
           if($nombrpassword>0)
-            {include("formulaire.php");}
+            {include("formulaire.php");
+
+             $_SESSION['nom']=$_POST['user'];
+             $_SESSION['password']=$_POST['psw'];
+          
+
+           }
          
          else {
       			print "Aucune ligne ne correspond à la requête.";

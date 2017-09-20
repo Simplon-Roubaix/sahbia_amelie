@@ -1,5 +1,11 @@
+ <?php session_start();
+  $_SESSION["connecte"]=0;
+  $_SESSION['user']="";
+ 
+
+ ?>
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -29,17 +35,20 @@
               <p> <strong>La Petite</strong><FONT color="#E64C93"> Boutique</FONT>.com</p>
 
             </div>
-            <!-- <div class="col-12 col-md-12 col-lg-3">
-            <form id="recherche" method="post">
-
-              <input name="saisie" type="text" placeholder="Rechercher..." required />
-              <input class="loupe" type="submit" value="" />
-
-            </form>
-            </div> -->
+           
             
              <div class="connexion-button col  mr-0">
-              <a class="btn" href="administrateur.php">Connexion</a>
+               <?php if ($_SESSION['connecte']==0)
+                   {
+                
+                 echo '<a class="btn" href="administrateur.php">Connexion</a>';
+               }
+                else {
+                    echo '<a class="btn" href="index.php">deconnexion'.$_SESSION['user'].'</a>';
+                  
+
+                }
+                ?>
             </div>
 
             <!-- <div id="caddy" class="col">
