@@ -1,23 +1,43 @@
 
-        <?php include("header.php"); ?>
-           <?php include("produit.php");?>
-			<div class="container-fluid">
+        <?php include("header.php"); 
+      
+          // DISPLAY ARTICLE FROM DATABASE 
+         try
+
+        {
+
+            $bdd = new PDO('mysql:host=localhost;dbname=amelisahbiacommerce;charset=utf8', 'root', 'sahbia2017');
+
+        }
+
+        catch(Exception $e)
+
+        {
+
+                die('Erreur : '.$e->getMessage());
+
+        }
+
+        $req=$bdd->query('SELECT * FROM articles');
+        $req2=$bdd->query('SELECT src FROM imagesinfor');
+        ?>
+        <div class="container-fluid">
 			 <div class="row">
-			 <?php
-				 for($i =0; $i<6; $i++ )
-				{
-			 ?>
+		<?php	 
+        while(($donnes=$req->fetch())AND($donne2=$req2->fetch()))
+        {
 
+        ?>
 
-
+			
 				   <div class="card-group col-sm-12 col-md-6 col-lg-4">
 				     <div class="card">
-				         <img class="card-img-top center" src= "<?php  echo $produit[$i]['image_src'];?>" alt="Card image cap" height="250" width="250">
+				         <img class="card-img-top center" src="<?php echo $donne2['src'] ?>" alt="Card image cap" height="250" width="250">
 				        <div class="card-block">
-				            <h4 class="card-title"> <?php  echo $produit[$i]['Nom'];?></h4>
-				            <p class="card-text">color:<?php  echo $produit[$i]['Color'];?></p>
-				            <p class="card-text">prix:<?php  echo $produit[$i]['Prix'];?></p>
-				             <a href="details.php?id=<?php echo $i; ?>" class="btn btn-primary">detail </a>
+				            <h4 class="card-title"> <?php  echo $donnes['nom'];?></h4>
+				            <p class="card-text">color:<?php  echo $donnes['color'];?></p>
+				            <p class="card-text">prix:<?php  echo $donnes['prix'];?></p>
+				             <a href="details.php?i=<?php echo $donnes['id']; ?> &amp; sr= <?php echo $donne2['src'];?>" class="btn btn-primary">detail </a>
 				        </div>
 				     </div>
 			 	  </div>
@@ -30,6 +50,7 @@
 ?>
 </div>
 </div>
+
 
 
 
