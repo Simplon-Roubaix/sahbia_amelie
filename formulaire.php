@@ -1,3 +1,5 @@
+
+<?php include('header.php') ?>
 <div  id="form_d" class="m-5 m-a">
 <form action="produit.php" method="post" enctype="multipart/form-data">
   <div class="form-group">

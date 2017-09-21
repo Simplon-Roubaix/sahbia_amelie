@@ -1,31 +1,5 @@
 <?php 
- 
-include("header.php");
-  
-?>
-
-<div id="administateur" class="text-center">
-	 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" accept-charset="utf-8">
-         User name:
-         <input type="text" name="user">
-         User password:
-
-        <input type="password" name="psw">
-	    <input type="submit" value="Valider" />
-		
-	 </form>
-	</div>
-    <hr>
-
-
-
-
-     
-<?php
-
-
-     
-
+   session_start();
 
       try
 
@@ -45,57 +19,54 @@ include("header.php");
 
           
       
-   
-
-
-
-    
+      
 	if( isset($_POST['psw'])&&isset($_POST['user']) )
 	{
 		 $password=$_POST['psw'];
 	    $user=htmlspecialchars($_POST['user']);
-	     $_SESSION['user']=$user;
-	     $_SESSION['connecte']=1;
+	     
 
-        $req=$bdd->prepare('SELECT COUNT(*)  FROM administateurs  WHERE unsername=?');
-       $req->execute(array($_POST['user']));
-       $nombrecompte=$req->fetchColumn();
+        $req=$bdd->prepare('SELECT id  FROM administateurs  WHERE unsername=? AND password=?');
+       $req->execute(array($_POST['user'],$_POST['psw']));
+       $compte_existe=$req->fetch();
        
         
 
 
-       if($nombrecompte>0)
+       if(!$compte_existe)
        {
-       	      $req2=$bdd->prepare('SELECT COUNT(*)  FROM administateurs  WHERE password=?');
-             $req2->execute(array($_POST['psw']));
-             $nombrpassword=$req2->fetchColumn();
-             
-          if($nombrpassword>0)
-            {include("formulaire.php");
+       	    echo "<script language=\"javascript\">";
+			     echo "alert('mot de passe ou nom utilistaur  incorect')";
+			     echo "</script>";
+           header('Location:connexion.php');
+ 
+         }
+          else {  include("formulaire.php");
 
-             $_SESSION['nom']=$_POST['user'];
-             $_SESSION['password']=$_POST['psw'];
+                  
+                   $_SESSION['id']=$compte_existe['id'];
+                   $_SESSION['pseudo']=$user;
+
+                }     
+      }
+
+
+             // $_SESSION['nom']=$_POST['user'];
+             // $_SESSION['password']=$_POST['psw'];
+             // $_SESSION['connecte']=1;
+
+
+          // echo "<script>window.location.replace(\"header.php\")</script>";
           
 
-           }
-         
-         else {
-      			print "Aucune ligne ne correspond à la requête.";
-   			}
-	    }
-	else {
-		    echo "<script language=\"javascript\">";
-			echo "alert('mot de passe ou nom utilistaur  incorect')";
-			echo "</script>";
-	   }
-	}   
+           
+        
+ 
 
 ?> 
 
 
 
 
-   <?php
-	
-	?>
+  
 </div>	

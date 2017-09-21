@@ -1,9 +1,3 @@
- <?php session_start();
-  $_SESSION["connecte"]=0;
-  $_SESSION['user']="";
- 
-
- ?>
 <!doctype html>
 <html class="no-js" lang="fr">
     <head>
@@ -35,25 +29,24 @@
               <p> <strong>La Petite</strong><FONT color="#E64C93"> Boutique</FONT>.com</p>
 
             </div>
-           
-            
              <div class="connexion-button col  mr-0">
-               <?php if ($_SESSION['connecte']==0)
-                   {
-                
-                 echo '<a class="btn" href="administrateur.php">Connexion</a>';
-               }
-                else {
-                    echo '<a class="btn" href="index.php">deconnexion'.$_SESSION['user'].'</a>';
-                  
+            <?php
+              if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
 
-                }
-                ?>
+              {
+
+             echo '<a href="deconnexion.php" target="_blank"> <input type="button"  class="btn" value="Déconnexion'.$_SESSION['pseudo'].'"> </a>';
+                
+               }
+            
+              else{
+                echo '<a href="connexion.php" target="_blank"> <input type="button" class="btn" value="Connexion"> </a>';
+                
+              }
+             ?>
             </div>
 
-            <!-- <div id="caddy" class="col">
-              <img src="img/caddi.jpg" alt="caddy" class="caddu__img" height="45" width="45">
-            </div> -->
+            
 
         </div>
             
